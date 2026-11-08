@@ -18,8 +18,8 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Chemistry",
   "Topic :: Scientific/Engineering :: Physics",
 ]
-# qvolve is the sibling project in this monorepo, not a PyPI package:
-#     pip install -e ../simulator
+# qvolve is a separate repository of mine rather than a PyPI package:
+#     pip install "qvolve @ git+https://github.com/parthdeshmukh488-ops/quantum-simulator.git"
 # must happen first.  PySCF supplies molecular integrals; everything
 # quantum-mechanical downstream of them is implemented here.
 dependencies = ["numpy>=1.24", "scipy>=1.10", "pyscf>=2.3"]

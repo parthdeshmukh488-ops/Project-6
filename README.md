@@ -1,7 +1,7 @@
 # vqelab — VQE for molecules, on my own simulator
 
 Variational quantum eigensolver built from first principles and run on
-[`../simulator`](../simulator), the state-vector engine from the first project
+[`quantum-simulator`](https://github.com/parthdeshmukh488-ops/quantum-simulator), the state-vector engine from the first project
 in this repository.
 
 PySCF supplies the molecular integrals — computing Gaussian integrals is
@@ -64,7 +64,7 @@ sinusoid. Verified against central differences to 4 × 10⁻¹¹.
 ## Running it
 
 ```bash
-pip install -e ../simulator
+pip install "qvolve @ git+https://github.com/parthdeshmukh488-ops/quantum-simulator.git"
 pip install -e ".[dev,plot]"
 pytest tests/ -q
 ```
@@ -176,7 +176,7 @@ Checks worth singling out:
   They cost 0.8–3.4 × 10⁻⁴ Ha, inside chemical accuracy, but they are an
   approximation and the numbers above are against full FCI so the cost is
   visible.
-- **No hardware runs.** Everything is on the simulator from `../simulator`.
+- **No hardware runs.** Everything is on the simulator from [`quantum-simulator`](https://github.com/parthdeshmukh488-ops/quantum-simulator).
 - **Noise is Pauli-only.** Depolarising and readout channels are sampled
   exactly; coherent errors, crosstalk and amplitude damping are not modelled,
   and coherent errors in particular do not mitigate the same way.
